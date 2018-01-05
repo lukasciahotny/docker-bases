@@ -1,0 +1,1 @@
+{ "options" : { "autoIndexId" : false }, "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "datasets.states" }, { "v" : 1, "key" : { "state_list" : 1 }, "name" : "state_list_1", "ns" : "datasets.states" } ] }

@@ -1,0 +1,27 @@
+{
+  "name": "dockerBases",
+  "description": "Databases inside docker images.",
+  "repository": {
+    "type": "git",
+    "url": "https://none.nan"
+  },
+  "version": "v0.1.0",
+  "scripts": {
+    "docker:mongo": "./docker/scripts/setupContainers -u mongo",
+    "docker:couchbase": "./docker/scripts/setupContainers -u couchbase",
+    "docker:marklogic": "./docker/scripts/setupContainers -u marklogic",
+    "docker:stop:all": "docker stop $(docker ps -aq)",
+    "docker:remove:all:containers": "docker rm $(docker ps -aq)",
+    "docker:stop:remove:all": "npm run docker:stop:all && npm run docker:remove:all:containers"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://nobugs.nothing"
+  },
+  "homepage": "https://noHomepage.nowhere",
+  "private": true,
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
