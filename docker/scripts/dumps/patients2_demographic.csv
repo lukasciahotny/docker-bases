@@ -1,0 +1,12 @@
+type,_id,lastName,firstName,gender,birthDate,maritalStatus,race,allergies,height,weight,patientID
+ patients2_demographics,59f307891f0d6766995cd738,Wayne,Bruce,male,1978-07-23T04:00:00Z,single,white,none,180.0,80.0,27.0
+ patients2_demographics,59f307891f0d6766995cd739,Jones,Randall,male,1980-07-23T04:00:00Z,single,white,none,180.0,80.0,19.0
+ patients2_demographics,59f307891f0d6766995cd73a,Jones,Engelberto,male,1982-04-25T05:00:00Z,single,white,penicillin,180.0,80.0,66.0
+ patients2_demographics,59f307891f0d6766995cd73b,Smith,Patricia,female,1982-04-25T05:00:00Z,married,white,none,180.0,80.0,80.0
+ patients2_demographics,59f307891f0d6766995cd73c,Williams,Mary,female,1975-04-25T04:00:00Z,single,white,none,180.0,80.0,100.0
+ patients2_demographics,59f307891f0d6766995cd73d,Sullivan,John,male,1963-04-25T04:00:00Z,married,white,none,180.0,80.0,82.0
+ patients2_demographics,59f307891f0d6766995cd73e,Baker,Joseph,male,1967-09-25T04:00:00Z,married,white,none,180.0,83.0,87.0
+ patients2_demographics,59f307891f0d6766995cd73f,Baker,Mary,female,1973-03-15T05:00:00Z,married,white,none,180.0,80.0,2.0
+ patients2_demographics,59f307891f0d6766995cd740,Winslow,Carl,male,1955-03-15T04:00:00Z,single,black,none,180.0,80.0,91.0
+ patients2_demographics,59f307891f0d6766995cd741,Urkel,Stephan,male,1985-08-03T04:00:00Z,single,black,latex,180.0,80.0,1.0
+ 
