@@ -40,6 +40,18 @@ init_couchbase() {
   echo -e "${GREEN}configuring couchbase...${NC}"
   docker cp $SCRIPTS_DIR/initCouchbase couchbase:/tmp/initCouchbase
   docker cp $SCRIPTS_DIR/dumps/couchbase.zip couchbase:/tmp/
+  docker cp $SCRIPTS_DIR/dumps/auditlog.csv couchbase:/tmp/
+  docker cp $SCRIPTS_DIR/dumps/customers.csv couchbase:/tmp/
+  docker cp $SCRIPTS_DIR/dumps/inventory_items.csv couchbase:/tmp/
+  docker cp $SCRIPTS_DIR/dumps/ordered_items.csv couchbase:/tmp/
+  docker cp $SCRIPTS_DIR/dumps/orders.csv couchbase:/tmp/
+  docker cp $SCRIPTS_DIR/dumps/flights.csv couchbase:/tmp/
+  docker cp $SCRIPTS_DIR/dumps/olympics.csv couchbase:/tmp/
+  docker cp $SCRIPTS_DIR/dumps/revenue.csv couchbase:/tmp/
+  docker cp $SCRIPTS_DIR/dumps/types.csv couchbase:/tmp/
+  docker cp $SCRIPTS_DIR/dumps/steamgames.csv couchbase:/tmp/
+  docker cp $SCRIPTS_DIR/dumps/timeseries.csv couchbase:/tmp/
+  docker cp $SCRIPTS_DIR/dumps/states.csv couchbase:/tmp/
   docker cp $SCRIPTS_DIR/dumps/patients.csv couchbase:/tmp/
   echo -e "${GREEN}files uploaded  :)${NC}"
   docker exec couchbase /tmp/initCouchbase

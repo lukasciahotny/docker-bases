@@ -1,4 +1,4 @@
-type,_id,discipline,city,gender,country,year,sport,type,event
+type,_id,discipline,city,gender,country,year,sport,medal,event
  olympics,59f308051f0d6766995d3c0b,Figure skating,Chamonix,X,FIN,1924,Skating,Silver,pairs
  olympics,59f308051f0d6766995d3c0c,Figure skating,Chamonix,W,AUT,1924,Skating,Gold,individual
  olympics,59f308051f0d6766995d3c0d,Biathlon,Chamonix,M,FRA,1924,Biathlon,Bronze,military patrol

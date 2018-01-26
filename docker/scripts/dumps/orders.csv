@@ -39999,4 +39999,3 @@ type,_id,customer_key,order_key,purchase_date
  orders,59f3083d1f0d676699605189,customer_key_9999,order_key_39997,2009-08-13T11:47:51Z
  orders,59f3083d1f0d67669960518a,customer_key_9999,order_key_39998,2011-06-27T17:03:14Z
  orders,59f3083d1f0d67669960518b,customer_key_9999,order_key_39999,2010-08-31T11:59:21Z
- orders,

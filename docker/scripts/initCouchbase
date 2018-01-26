@@ -51,8 +51,12 @@ sleep 10
 
 echo -e "${GREEN}setting up bulk dump of data to bucket...${NC}"
 #cbdocloader -n 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -s 100 /tmp/couchbase.zip
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/auditlog.csv -g key::%_id%
 cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/patients.csv -g key::%_id%
 cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/customers.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/inventory_items.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/ordered_items.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/orders.csv -g key::%_id%
 cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/flights.csv -g key::%_id%
 cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/olympics.csv -g key::%_id%
 cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/revenue.csv -g key::%_id%
