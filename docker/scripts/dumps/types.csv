@@ -1,7 +1,7 @@
 type,_id,field1,field2,field3
- types,59f307d31f0d6766995d0c44,true,parallel,
- types,59f307d31f0d6766995d0c45,true,parallel,
- types,59f307d31f0d6766995d0c46,,false,27.0
- types,59f307d31f0d6766995d0c47,,sequential,39.0
- types,59f307d31f0d6766995d0c48,false,sequential,false
- types,59f307d31f0d6766995d0c49,null,null,true
+types,59f307d31f0d6766995d0c44,true,parallel,
+types,59f307d31f0d6766995d0c45,true,parallel,
+types,59f307d31f0d6766995d0c46,,false,27.0
+types,59f307d31f0d6766995d0c47,,sequential,39.0
+types,59f307d31f0d6766995d0c48,false,sequential,false
+types,59f307d31f0d6766995d0c49,null,null,true
