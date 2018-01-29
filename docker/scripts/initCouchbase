@@ -43,17 +43,30 @@ printf "\n\n"
 
 sleep 1
 
-echo -e "${GREEN}setting up bulk dump of data to bucket...${NC}"
-cbdocloader -n 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -s 100 /tmp/couchbase.zip
-printf "\n\n"
-
-sleep 1
-
 echo -e "${GREEN}setting up couchbase indexes...${NC}"
 curl -v $CB:8091/settings/indexes -d 'storageMode=memory_optimized'
 printf "\n\n"
 
 sleep 10
+
+echo -e "${GREEN}setting up bulk dump of data to bucket...${NC}"
+#cbdocloader -n 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -s 100 /tmp/couchbase.zip
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/auditlog.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/patients.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/customers.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/inventory_items.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/ordered_items.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/orders.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/flights.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/olympics.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/revenue.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/types.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/steamgames.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/timeseries.csv -g key::%_id%
+cbimport csv -c 127.0.0.1:8091 -u ${USER_PASS} -p ${USER_PASS} -b testDb -d file:///tmp/states.csv -g key::%_id%
+printf "\n\n"
+
+sleep 1
 
 echo -e "${GREEN}Indexing testDb...${NC}"
 curl -v $CB:8093/query/service -d 'statement=CREATE PRIMARY INDEX `type-index` ON `testDb`;'

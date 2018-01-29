@@ -1,0 +1,9 @@
+type,_id,source,destination,fuel
+flights,59f307f31f0d6766995d3397,Los Angeles,San Francisco,200
+flights,59f307f31f0d6766995d3398,Los Angeles,Las Vegas,400
+flights,59f307f31f0d6766995d3399,Los Angeles,Dallas,700
+flights,59f307f31f0d6766995d339a,Los Angeles,New York,1300
+flights,59f307f31f0d6766995d339b,Las Vegas,Dallas,400
+flights,59f307f31f0d6766995d339c,Las Vegas,New York,900
+flights,59f307f31f0d6766995d339d,Dallas,New York,800
+flights,59f307f31f0d6766995d339e,Dallas,Orlando,600
